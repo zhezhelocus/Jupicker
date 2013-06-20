@@ -106,7 +106,7 @@ Config（详细配置）
 {String} 数据加载完成后在DOM上添加此Class名称 默认 'jupicker-complete'
 
 ---
-WHY?
+
 ---
 
 #### 
