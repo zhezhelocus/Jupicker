@@ -6,11 +6,6 @@ HTML模板
 <div class="J_jupicker" data-item="10000000134385,10000000134385," data-template="#J_template" ></div>
 ```
 
----
-Example
----
-  http://act.ju.taobao.com/go/act/ju-item-test.php
-  <br/>
 
 JS调用
 ---
@@ -77,6 +72,14 @@ KISSY.use('jbc/jupicker/v1/index',function(S, Jupicker){
 
 
 ```
+
+---
+Example
+---
+  http://act.ju.taobao.com/go/act/ju-item-test.php
+  <br/>
+
+  
 ---
 Class
 ---
