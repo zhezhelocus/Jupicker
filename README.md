@@ -3,34 +3,79 @@
 HTML模板
 ---
 ```
-<div class="J_juitem" data-item="10000000134385,10000000134385," data-template="#Ju_template" ></div>
+<div class="J_jupicker" data-item="10000000134385,10000000134385," data-template="#Ju_template" ></div>
 ```
 
 JS调用
 ---
 ```
 
-KISSY.ready(function(S){
-  S.use('jbc/jupicker/v1/',function(S, Jupicker){
+KISSY.use('jbc/jupicker/v1/index',function(S, Jupicker){
+    /*
+    页面加载完成后立即加载
+     */
     var jupicker = new Jupicker({
-      'juitem' : '.J_juitem',
-      //'juitem' : [S.one('.J_juitem')],
-      'autoload' : false,
-      'trace' : true,
-      'clear' : true,
-      //'template' : '#Ju_template', //默认为聚划算最新坑位模板，注：优先取Element自定义属性的配置 data-template=""
-      //'template' : '<div>template...</div>',
-      'idtype' : 'ju',
-      'class_done' : 'jupicker-complete',
-      'datalazyload' : true,
-      'callback' : function(_d){
-        console.log(_d);
-      }
+        'containers' : '.J_jupicker',
+        //'autoload' : false,
+        'trace' : true,
+        'clear' : true,
+        'template' : '',
+        'idtype' : 'ju',
+        'class_done' : 'jupicker-complete',
+        'datalazyload' : true,
+        'callback' : function(_d){
+            console.log(_d);
+        }
     });
-    S.Event.on('body', 'click', function(ev){
-      jupicker.init();
+
+    /*
+    页面加载完成后延迟1秒加载 自定义模板
+     */
+    var jupicker2 = new Jupicker({
+        'containers' : '.J_jupicker2',
+        'autoload' : false,
+        'trace' : true,
+        'clear' : true,
+        'template' : '#Ju_template',
+        'idtype' : 'ju',
+        'class_done' : 'jupicker-complete',
+        'datalazyload' : true,
+        'callback' : function(_d){
+            console.log(_d);
+        }
+    });
+    setTimeout(function(){
+        jupicker2.load();
+    },1000);
+
+    /*
+    页面加载完成后触发Click事件加载
+     */
+    var jupicker3 = new Jupicker({
+        'containers' : '.J_jupicker3',
+        'autoload' : false,
+        'trace' : true,
+        'clear' : true,
+        'template' : '',
+        'idtype' : 'ju',
+        'class_done' : 'jupicker-complete',
+        'datalazyload' : true,
+        'callback' : function(_d){
+            console.log(_d);
+        }
+    });
+
+    S.Event.on('.J_jupicker3', 'click', function(ev){
+        jupicker3.load();
     }, null);
-  });
+
+    /*
+    
+    如何获取开团时间未到的（已录入却展示不出的）商品。Example: http://tms.taobao.com/page/editTemplate.htm?id=608111 
+
+    */
+
+    
 });
 
 
@@ -48,7 +93,7 @@ config (Object) – 配置项
 ---
 Config（详细配置）
 ---
-### juitem  
+### containers  
 
 {String | HTMLElementList | HTMLElement | KISSY.Node}  容器元素的钩子或实例 默认 '.J_jupicker'
 
