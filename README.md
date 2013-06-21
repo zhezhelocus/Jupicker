@@ -92,7 +92,7 @@ config (Object) – 配置项
 ---
 Config（详细配置）
 ---
-### juitem  
+### containers  
 
   {String | HTMLElementList | HTMLElement | KISSY.Node}  容器元素的钩子或实例 默认 '.J_jupicker'
 
