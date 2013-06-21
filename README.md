@@ -11,7 +11,6 @@ Example
 ---
   http://act.ju.taobao.com/go/act/ju-item-test.php
   <br/>
-  如何获取未来商品：http://act.ju.taobao.com/go/rgn/jupicker-future-example.php
 
 JS调用
 ---
