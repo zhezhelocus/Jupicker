@@ -121,7 +121,7 @@ Config（详细配置）
 
 {String} 请求的数据ID类型 ，'item' , 'ju'两种可选，默认 'item' <span style='color:#f60'>注:后期将会取消'item' Id 类型，统一'ju' ID获取商品信息</span>
 
-### datalazyload
+### imglazyload
 
 {Boolean} 懒加载开关，开启状态会启用懒加载KISSY.DataLazyload 默认 false
 
