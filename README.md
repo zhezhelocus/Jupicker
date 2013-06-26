@@ -109,7 +109,7 @@ Config（详细配置）
 
 ### url
 
-{String} 数据接口 默认'http://ju.taobao.com/json/tg/AjaxGetJsonItems.htm' 可添加数据后戳 http://ju.taobao.com/json/tg/AjaxGetJsonItems.htm?custom1=value
+{String} 数据接口 默认'....GetJsonItems.htm' 可添加数据后戳 ....'GetJsonItems.htm?custom1=value'
 
 
 ### callback
