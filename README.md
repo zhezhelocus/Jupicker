@@ -57,7 +57,7 @@ KISSY.use('jbc/jupicker/v1/index',function(S, Jupicker){
         }
     });
 
-    //获取开团时间未到的（已录入却展示不出的）商品。 需要TMS权限 Example: http://tms.taobao.com/page/editTemplate.htm?id=608111
+    //获取开团时间未到的（已录入却展示不出的）商品。 需要TMS权限 Example: http://tms.taobao.com/go/act/ju-item-test.php
 
     setTimeout(function(){
         jupicker2.load();
@@ -76,7 +76,7 @@ KISSY.use('jbc/jupicker/v1/index',function(S, Jupicker){
 ---
 Example
 ---
-http://act.ju.taobao.com/go/act/ju-item-test.php
+http://tms.taobao.com/go/act/ju-item-test.php
 <br/>
 
   
